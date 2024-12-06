@@ -1,0 +1,71 @@
+// material-ui
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+// project imports
+import AuthCardWrapper from "../AuthCardWrapper";
+import AuthWrapper1 from "../AuthWrapper1";
+import Logo1 from "/logo.png";
+
+import AuthFooter from "ui-component/cards/AuthFooter";
+import RegNickname from "../authentication/reg-nickname/RegNickname";
+
+// ================================|| AUTH3 - LOGIN ||================================ //
+
+const SetName = () => {
+  const downMD = useMediaQuery((theme) => theme.breakpoints.down("md"));
+  const handleNicknameSet = (nickname) => {
+    console.log(`닉네임이 설정되었습니다: ${nickname}`);
+  };
+
+  return (
+    <AuthWrapper1>
+      <Grid container direction="column" justifyContent="flex-end" sx={{ minHeight: "100vh" }}>
+        <Grid item xs={12}>
+          <Grid container justifyContent="center" alignItems="center" sx={{ minHeight: "calc(100vh - 68px)" }}>
+            <Grid item sx={{ m: { xs: 1, sm: 3 }, mb: 0 }}>
+              <AuthCardWrapper>
+                <Grid container spacing={2} alignItems="center" justifyContent="center">
+                  <Grid item sx={{ mb: 3 }}>
+                    <Box>
+                      <img src={Logo1} alt="logo1" width={50} height={50} />
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Grid container direction={{ xs: "column-reverse", md: "row" }} alignItems="center" justifyContent="center">
+                      <Grid item>
+                        <Stack alignItems="center" justifyContent="center" spacing={1}>
+                          <Typography color="black" gutterBottom variant={downMD ? "h3" : "h2"}>
+                            닉네임 설정
+                          </Typography>
+                          <Typography variant="caption" fontSize="16px" textAlign={{ xs: "center", md: "inherit" }}>
+                            사용하실 닉네임을 설정해주세요.
+                          </Typography>
+                        </Stack>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <RegNickname onNicknameSet={handleNicknameSet} />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Divider />
+                  </Grid>
+                </Grid>
+              </AuthCardWrapper>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
+          <AuthFooter />
+        </Grid>
+      </Grid>
+    </AuthWrapper1>
+  );
+};
+
+export default SetName;
