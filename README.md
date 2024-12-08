@@ -1,7 +1,7 @@
 ## 🛠️ 프로젝트 정보
 
 - **프로젝트명:** 메랜인
-- **페이지URL:** [https://mapleland.in](https://mapleland.in)
+- **페이지 URL:** [https://mapleland.in](https://mapleland.in)
 - **진행 상황:** 개발 중
 
 ## 🌟 주요 기능
