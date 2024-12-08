@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Slf4j
 public class JwtTokenProvider {
-	private static final byte[] SIGNING_KEY = "cmFtYm83MTAyNTQ1M3JhbWJvNzEwMjU0NTNyYW1ibzcxMDI1NDUzcmFtYm83MTAyNTQ1Mw=="
+	private static final byte[] SIGNING_KEY = "MYKEY"
 			.getBytes();
 
 	private static final long TWO_HOURS_IN_MINUTES = 120L;
