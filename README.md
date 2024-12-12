@@ -2,7 +2,7 @@
 
 - **프로젝트명:** 메랜인
 - **설명:** 메이플랜드(RPG 게임) 에서 파티 구인/구직을 위한 채팅 사이트 
-- **페이지 URL:** [https://mapleland.in](https://mapleland.in)
+- **페이지 URL:** [https://mapleland.in](https://mapleland.in) (카카오 로그인 하시면 확인 가능합니다)
 - **진행 상황:** 개발 중
 
 ## 🌟 주요 기능
